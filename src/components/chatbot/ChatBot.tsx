@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import ChatWindow from "./ChatWindow";
 import ChatButton from "./ChatButton";
 import { useWebSocket } from "../../../services/websocket";

@@ -3,11 +3,9 @@
 import React, { useState, useEffect } from "react";
 import MessageBubble from "./MessageBubble";
 import ChatInput from "./ChatInput";
-import ProductCarousel from "./ProductCarousel";
 import { Product } from "../../types/Product";
 import BotThinking from "./BotThinking";
 import QuickReplies from "./QuickReplies";
-import { useWebSocket } from "../../../services/websocket";
 
 const NO_REAL_PRODUCTS = {
     products: [
@@ -60,13 +58,13 @@ const ChatWindow: React.FC<TChatWindowProps> = ({ messages, isConnected, sendMes
         sendMessage(message);
     };
 
-    const handleAction = (action: string, product: Product) => {
-        if (action === "Comprar") {
-            alert(`Has seleccionado comprar el producto: ${product.name}`);
-        } else if (action === "Detalles") {
-            alert(`Detalles del producto: ${product.description}`);
-        }
-    };
+    // const handleAction = (action: string, product: Product) => {
+    //     if (action === "Comprar") {
+    //         alert(`Has seleccionado comprar el producto: ${product.name}`);
+    //     } else if (action === "Detalles") {
+    //         alert(`Detalles del producto: ${product.description}`);
+    //     }
+    // };
 
     useEffect(() => {
         if (messages.length > 0) {
